@@ -1,7 +1,10 @@
-import React, {useCallback, useEffect} from 'react'
-import Key from './Key';
+import React, {useContext, useCallback, useEffect} from 'react'
+import { AppContext } from '../App';
+import Key from "../Components/Key"
 
 function Keyboard() {
+  const { onEnter, onDelete, onSelectLetter} = useContext(AppContext)
+
   const keys1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
   const keys2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
   const keys3 = ["Z", "X", "C", "V", "B", "N", "M"];
@@ -13,17 +16,17 @@ function Keyboard() {
       onDelete();
     } else {
       keys1.forEach((key)=> {
-        if (event.key === key) {
+        if (event.key.toLowerCase() === key.toLowerCase()) {
           onSelectLetter(key)
         }
       })
       keys2.forEach((key)=> {
-        if (event.key === key) {
+        if (event.key.toLowerCase() === key.toLowerCase()) {
           onSelectLetter(key)
         }
       })
       keys3.forEach((key)=> {
-        if (event.key === key) {
+        if (event.key.toLowerCase() === key.toLowerCase()) {
           onSelectLetter(key)
         }
       })
