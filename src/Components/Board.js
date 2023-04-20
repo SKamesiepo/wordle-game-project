@@ -1,5 +1,5 @@
-import { boardDefault } from '../Words';
 import Letter from '../Components/Letter'
+
 
 function Board () {
   return (
