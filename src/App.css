@@ -13,7 +13,7 @@ body {
 }
 
 nav {
-  height: 60px;
+  height: 80px;
   width: 100%;
   margin: 0;
   border-bottom: 1px solid grey;
@@ -25,6 +25,9 @@ nav h1 {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   color: white;
+  background-image: linear-gradient(to right, rgb(224, 224, 4), green);
+  border-radius: 4px;
+  padding: 8px;
   font-size: 45px;
 }
 
