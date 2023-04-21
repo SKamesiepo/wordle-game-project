@@ -67,12 +67,12 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <nav>
-        <h1>Wordle</h1>
+    <div className="text-center text-white bg-black w-screen h-screen">
+      <nav className="h-24 w-full m-0 border-b border-gray-400 grid place-items-center">
+        <h1 className="m-0 p-2 rounded-md font-sans text-4xl text-white  bg-gradient-to-r from-yellow-300 to-green-500">Wordle</h1>
       </nav>
       <AppContext.Provider value={{board, setBoard, currAttempt, setCurrAttempt, onSelectLetter, onDelete, onEnter, correctWord, setDisabledLetters, disabledLetters, setGameOver, gameOver} }>
-        <div className="game"> 
+        <div className="w-full h-fit pt-10 flex flex-col items-center pt-50"> 
           <Board />
           {gameOver.gameOver ? <GameOver /> : <Keyboard />}
         </div>
